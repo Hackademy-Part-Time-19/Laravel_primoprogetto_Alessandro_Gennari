@@ -14,8 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('home', ['siteTitle' => 'Prova sito ']);
+})->name('home');
+
+Route::get('/articoli', function () {
+    return view('articoli');
+})->name('articoli');
+
+Route::get('/chi-sono', function () {
+    return view('chi_sono', ['descrizione' => 'Ciao sono Alessandro Gennari']);
+})->name('chi_sono');
 
 
 
